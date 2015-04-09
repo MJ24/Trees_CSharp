@@ -14,6 +14,11 @@ namespace BinaryTree
             tree.PreOrder();
             tree.InOrder();
             tree.PostOrder();
+
+            Console.WriteLine("树的高度为：{0}", tree.GetHeight(tree.Head));
+            Console.WriteLine("树的叶节点数为：{0}", tree.GetLeafsNum(tree.Head));
+            Node<string> c = tree.GetNodeByValue(tree.Head, "C");
+            Console.WriteLine("节点'C'的左右子节点分别为：'{0}' , '{1}'", c.LChild.Data, c.RChild.Data);
             Console.ReadLine();
         }
 
